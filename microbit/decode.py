@@ -2,7 +2,7 @@ import struct
 import os
 import sys
 
-f = open('/home/jimmo/data1', 'rb')
+f = open('data1dark', 'rb')
 #f = open('/home/jimmo/data2', 'r')
 #f = open('/home/jimmo/data3-darken', 'r')
 
