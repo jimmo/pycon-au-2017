@@ -6,7 +6,6 @@ i = 0
 while True:
   if button_a.was_pressed():
     display.show(Image.HEART)
-    radio.send_bytes(bytes([0xff]*(i%10)) + bytes([0xff,0x00,0xaa,0x55,i%256]))
-    #radio.send_bytes(bytes([1,2,3,4]))
+    radio.send('UUUUpy' + chr(i%10))
     display.clear()
     i += 1

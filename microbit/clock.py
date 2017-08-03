@@ -2,7 +2,7 @@ import struct
 import os
 import sys
 
-f = open('clock2', 'rb')
+f = open('/tmp/fifo', 'rb')
 
 def reversebits(word, numbits=8):
   return sum(1<<(numbits-1-i) for i in range(numbits) if word>>i&1)

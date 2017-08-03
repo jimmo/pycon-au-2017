@@ -2,9 +2,7 @@ import struct
 import os
 import sys
 
-f = open('data1dark', 'rb')
-#f = open('/home/jimmo/data2', 'r')
-#f = open('/home/jimmo/data3-darken', 'r')
+f = open('data1.bin', 'rb')
 
 b0 = 0
 b1 = 0
@@ -27,8 +25,6 @@ def lfsr_decode(word, data):
 
 packet = ''
 
-#while True:
-  #chunk = os.read(f.fileno(), 200)
 chunk = f.read()
 for xi in range(0, len(chunk), 2):
   x, = struct.unpack('h', chunk[xi:xi+2])
